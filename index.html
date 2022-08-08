@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | BuildQuestHack</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" width=1920 height=1080 style="width: 1920px; height: 1080px; background: #231F20"></canvas>
+    <script src="Build/0.001a.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/0.001a.data",
+        frameworkUrl: "Build/0.001a.framework.js",
+        codeUrl: "Build/0.001a.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "SnakeGame",
+        productName: "BuildQuestHack",
+        productVersion: "0.001a",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
